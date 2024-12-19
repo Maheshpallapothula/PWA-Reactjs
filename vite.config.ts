@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
+      registerType: "autoUpdate",
       manifest: {
         name: "My Vite App",
         short_name: "MyApp",
@@ -23,6 +24,14 @@ export default defineConfig({
             src: "/logo512.png",
             sizes: "512x512",
             type: "image/png",
+          },
+        ],
+      },
+      workbox: {
+        runtimeCaching: [
+          {
+            urlPattern: /.*\.(?:mp4|webm|ogg)$/,
+            handler: "NetworkOnly", // Ensure video requests are handled outside the service worker
           },
         ],
       },

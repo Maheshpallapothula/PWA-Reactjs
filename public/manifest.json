@@ -1,6 +1,6 @@
 {
-  "name": "MAI Accounts",
-  "short_name": "MAI Accounts",
+  "name": "PWA Video Downloader Offline",
+  "short_name": "App Accounts",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
